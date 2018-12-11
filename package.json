@@ -1,0 +1,17 @@
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "a wrapper api to support calling pokedex",
+  "main": "index.js",
+  "scripts": {
+    "start": "PORT=9001 node index.js",
+    "heroku-postbuild": "cd PokeDex && npm install && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eugene Vedensky",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "node-fetch": "^2.3.0"
+  }
+}
