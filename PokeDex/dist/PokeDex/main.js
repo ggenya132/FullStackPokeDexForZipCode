@@ -79,7 +79,7 @@ module.exports = "<app-navbar></app-navbar>\n<router-outlet></router-outlet>\n<a
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box; }\n\nbody {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 500;\n  background-color: #707070; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxXQUFVO0VBQ1YsVUFBUztFQUNULHVCQUFzQixFQUN2Qjs7QUFDRDtFQUNFLGtDQUFpQztFQUNqQyxpQkFBZ0I7RUFDaEIsMEJBQW9DLEVBQ3JDIiwiZmlsZSI6InNyYy9hcHAvYXBwLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiJHBva2VSZWQ6ICNlZjUzNTA7XG4kYmFja2dyb3VuZEdyYXk6IHJnYigxMTIsIDExMiwgMTEyKTtcbioge1xuICBwYWRkaW5nOiAwO1xuICBtYXJnaW46IDA7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG59XG5ib2R5IHtcbiAgZm9udC1mYW1pbHk6IFwiUm9ib3RvXCIsIHNhbnMtc2VyaWY7XG4gIGZvbnQtd2VpZ2h0OiA1MDA7XG4gIGJhY2tncm91bmQtY29sb3I6IHJnYigxMTIsIDExMiwgMTEyKTtcbn1cbiJdfQ== */"
+module.exports = "* {\n  padding: 0;\n  margin: 0;\n  box-sizing: border-box; }\n\nbody {\n  font-family: \"Roboto\", sans-serif;\n  font-weight: 500;\n  background-color: #707070; }\n\n.fa {\n  cursor: pointer; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBRUE7RUFDRSxXQUFVO0VBQ1YsVUFBUztFQUNULHVCQUFzQixFQUN2Qjs7QUFDRDtFQUNFLGtDQUFpQztFQUNqQyxpQkFBZ0I7RUFDaEIsMEJBQW9DLEVBQ3JDOztBQUVEO0VBQ0UsZ0JBQWUsRUFDaEIiLCJmaWxlIjoic3JjL2FwcC9hcHAuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIkcG9rZVJlZDogI2VmNTM1MDtcbiRiYWNrZ3JvdW5kR3JheTogcmdiKDExMiwgMTEyLCAxMTIpO1xuKiB7XG4gIHBhZGRpbmc6IDA7XG4gIG1hcmdpbjogMDtcbiAgYm94LXNpemluZzogYm9yZGVyLWJveDtcbn1cbmJvZHkge1xuICBmb250LWZhbWlseTogXCJSb2JvdG9cIiwgc2Fucy1zZXJpZjtcbiAgZm9udC13ZWlnaHQ6IDUwMDtcbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDExMiwgMTEyLCAxMTIpO1xufVxuXG4uZmEge1xuICBjdXJzb3I6IHBvaW50ZXI7XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -274,7 +274,7 @@ var HomeComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-container\">\n  <div class=\"modal-image rotating\">\n    <img src=\"https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG\" />\n  </div>\n</div>\n"
+module.exports = "<div class=\"modal-container\">\n  <img\n    class=\"rotating pokeloader\"\n    src=\"https://upload.wikimedia.org/wikipedia/en/3/39/Pokeball.PNG\"\n  />\n</div>\n"
 
 /***/ }),
 
@@ -285,7 +285,7 @@ module.exports = "<div class=\"modal-container\">\n  <div class=\"modal-image ro
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".modal-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: rgba(0, 0, 0, 0.5); }\n\n@-webkit-keyframes rotating /* Safari and Chrome */ {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n@keyframes rotating {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n\n.rotating {\n  -webkit-animation: rotating 2s linear infinite;\n  animation: rotating 2s linear infinite; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9sb2FkaW5nLW1vZGFsL2xvYWRpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBa0I7RUFDbEIsWUFBVztFQUNYLGFBQVk7RUFDWixPQUFNO0VBQ04sUUFBTztFQUNQLGNBQWE7RUFDYix3QkFBdUI7RUFDdkIsb0JBQW1CO0VBQ25CLCtCQUE4QixFQUMvQjs7QUFFRDtFQUNFO0lBQ0UsZ0NBQStCO0lBRS9CLHdCQUF1QixFQUFBO0VBRXpCO0lBQ0Usa0NBQWlDO0lBRWpDLDBCQUF5QixFQUFBLEVBQUE7O0FBRzdCO0VBQ0U7SUFHRSxnQ0FBK0I7SUFFL0Isd0JBQXVCLEVBQUE7RUFFekI7SUFHRSxrQ0FBaUM7SUFFakMsMEJBQXlCLEVBQUEsRUFBQTs7QUFHN0I7RUFDRSwrQ0FBOEM7RUFJOUMsdUNBQXNDLEVBQ3ZDIiwiZmlsZSI6InNyYy9hcHAvbG9hZGluZy1tb2RhbC9sb2FkaW5nLW1vZGFsLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLm1vZGFsLWNvbnRhaW5lciB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZTtcbiAgd2lkdGg6IDEwMCU7XG4gIGhlaWdodDogMTAwJTtcbiAgdG9wOiAwO1xuICBsZWZ0OiAwO1xuICBkaXNwbGF5OiBmbGV4O1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwLjUpO1xufVxuXG5ALXdlYmtpdC1rZXlmcmFtZXMgcm90YXRpbmcgLyogU2FmYXJpIGFuZCBDaHJvbWUgKi8ge1xuICBmcm9tIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIC1vLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgLW8tdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICB9XG59XG5Aa2V5ZnJhbWVzIHJvdGF0aW5nIHtcbiAgZnJvbSB7XG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIC1tb3otdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICAtby10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICB0cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgfVxuICB0byB7XG4gICAgLW1zLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgLW1vei10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgICAtby10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gIH1cbn1cbi5yb3RhdGluZyB7XG4gIC13ZWJraXQtYW5pbWF0aW9uOiByb3RhdGluZyAycyBsaW5lYXIgaW5maW5pdGU7XG4gIC1tb3otYW5pbWF0aW9uOiByb3RhdGluZyAycyBsaW5lYXIgaW5maW5pdGU7XG4gIC1tcy1hbmltYXRpb246IHJvdGF0aW5nIDJzIGxpbmVhciBpbmZpbml0ZTtcbiAgLW8tYW5pbWF0aW9uOiByb3RhdGluZyAycyBsaW5lYXIgaW5maW5pdGU7XG4gIGFuaW1hdGlvbjogcm90YXRpbmcgMnMgbGluZWFyIGluZmluaXRlO1xufVxuIl19 */"
+module.exports = ".modal-container {\n  position: absolute;\n  width: 100%;\n  height: 100%;\n  top: 0;\n  left: 0;\n  display: flex;\n  justify-content: flex-end;\n  align-items: flex-end;\n  background: rgba(0, 0, 0, 0); }\n  .modal-container .pokeloader {\n    width: 50px;\n    height: 50px;\n    margin: 0.5rem; }\n  @-webkit-keyframes rotating /* Safari and Chrome */ {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n  @keyframes rotating {\n  from {\n    -webkit-transform: rotate(0deg);\n    transform: rotate(0deg); }\n  to {\n    -webkit-transform: rotate(360deg);\n    transform: rotate(360deg); } }\n  .rotating {\n  -webkit-animation: rotating 0.5s linear infinite;\n  animation: rotating 0.5s linear infinite; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9sb2FkaW5nLW1vZGFsL2xvYWRpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxtQkFBa0I7RUFDbEIsWUFBVztFQUNYLGFBQVk7RUFDWixPQUFNO0VBQ04sUUFBTztFQUNQLGNBQWE7RUFDYiwwQkFBeUI7RUFDekIsc0JBQXFCO0VBQ3JCLDZCQUE0QixFQU83QjtFQWhCRDtJQVlJLFlBQVc7SUFDWCxhQUFZO0lBQ1osZUFBYyxFQUNmO0VBR0g7RUFDRTtJQUNFLGdDQUErQjtJQUUvQix3QkFBdUIsRUFBQTtFQUV6QjtJQUNFLGtDQUFpQztJQUVqQywwQkFBeUIsRUFBQSxFQUFBO0VBRzdCO0VBQ0U7SUFHRSxnQ0FBK0I7SUFFL0Isd0JBQXVCLEVBQUE7RUFFekI7SUFHRSxrQ0FBaUM7SUFFakMsMEJBQXlCLEVBQUEsRUFBQTtFQUc3QjtFQUNFLGlEQUFnRDtFQUloRCx5Q0FBd0MsRUFDekMiLCJmaWxlIjoic3JjL2FwcC9sb2FkaW5nLW1vZGFsL2xvYWRpbmctbW9kYWwuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIubW9kYWwtY29udGFpbmVyIHtcbiAgcG9zaXRpb246IGFic29sdXRlO1xuICB3aWR0aDogMTAwJTtcbiAgaGVpZ2h0OiAxMDAlO1xuICB0b3A6IDA7XG4gIGxlZnQ6IDA7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogZmxleC1lbmQ7XG4gIGFsaWduLWl0ZW1zOiBmbGV4LWVuZDtcbiAgYmFja2dyb3VuZDogcmdiYSgwLCAwLCAwLCAwKTtcblxuICAucG9rZWxvYWRlciB7XG4gICAgd2lkdGg6IDUwcHg7XG4gICAgaGVpZ2h0OiA1MHB4O1xuICAgIG1hcmdpbjogMC41cmVtO1xuICB9XG59XG5cbkAtd2Via2l0LWtleWZyYW1lcyByb3RhdGluZyAvKiBTYWZhcmkgYW5kIENocm9tZSAqLyB7XG4gIGZyb20ge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgLW8tdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gIH1cbiAgdG8ge1xuICAgIC13ZWJraXQtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgICAtby10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gIH1cbn1cbkBrZXlmcmFtZXMgcm90YXRpbmcge1xuICBmcm9tIHtcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMGRlZyk7XG4gICAgLW1vei10cmFuc2Zvcm06IHJvdGF0ZSgwZGVnKTtcbiAgICAtd2Via2l0LXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIC1vLXRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICAgIHRyYW5zZm9ybTogcm90YXRlKDBkZWcpO1xuICB9XG4gIHRvIHtcbiAgICAtbXMtdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgICAtbW96LXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgLXdlYmtpdC10cmFuc2Zvcm06IHJvdGF0ZSgzNjBkZWcpO1xuICAgIC1vLXRyYW5zZm9ybTogcm90YXRlKDM2MGRlZyk7XG4gICAgdHJhbnNmb3JtOiByb3RhdGUoMzYwZGVnKTtcbiAgfVxufVxuLnJvdGF0aW5nIHtcbiAgLXdlYmtpdC1hbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xuICAtbW96LWFuaW1hdGlvbjogcm90YXRpbmcgMC41cyBsaW5lYXIgaW5maW5pdGU7XG4gIC1tcy1hbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xuICAtby1hbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xuICBhbmltYXRpb246IHJvdGF0aW5nIDAuNXMgbGluZWFyIGluZmluaXRlO1xufVxuIl19 */"
 
 /***/ }),
 
@@ -301,20 +301,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoadingModalComponent", function() { return LoadingModalComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _poke_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../poke.service */ "./src/app/poke.service.ts");
+
 
 
 var LoadingModalComponent = /** @class */ (function () {
-    function LoadingModalComponent() {
+    function LoadingModalComponent(pokeService) {
+        this.pokeService = pokeService;
     }
-    LoadingModalComponent.prototype.ngOnInit = function () {
-    };
+    LoadingModalComponent.prototype.ngOnInit = function () { };
     LoadingModalComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-loading-modal',
+            selector: "app-loading-modal",
             template: __webpack_require__(/*! ./loading-modal.component.html */ "./src/app/loading-modal/loading-modal.component.html"),
             styles: [__webpack_require__(/*! ./loading-modal.component.scss */ "./src/app/loading-modal/loading-modal.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_poke_service__WEBPACK_IMPORTED_MODULE_2__["PokeService"]])
     ], LoadingModalComponent);
     return LoadingModalComponent;
 }());
@@ -413,20 +415,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PokeEntryComponent", function() { return PokeEntryComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _poke_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../poke.service */ "./src/app/poke.service.ts");
+
 
 
 var PokeEntryComponent = /** @class */ (function () {
-    function PokeEntryComponent() {
+    function PokeEntryComponent(pokeService) {
+        var _this = this;
+        this.pokeService = pokeService;
+        this.isLoading = false;
+        this.pokeService.isLoadingChange.subscribe(function (isLoading) {
+            console.log(" getting new loading state", ": ", isLoading);
+            _this.isLoading = isLoading;
+        });
     }
-    PokeEntryComponent.prototype.ngOnInit = function () {
-    };
+    PokeEntryComponent.prototype.ngOnInit = function () { };
     PokeEntryComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-poke-entry',
+            selector: "app-poke-entry",
             template: __webpack_require__(/*! ./poke-entry.component.html */ "./src/app/poke-entry/poke-entry.component.html"),
             styles: [__webpack_require__(/*! ./poke-entry.component.scss */ "./src/app/poke-entry/poke-entry.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_poke_service__WEBPACK_IMPORTED_MODULE_2__["PokeService"]])
     ], PokeEntryComponent);
     return PokeEntryComponent;
 }());
@@ -515,7 +525,7 @@ module.exports = "<div class=\"image__container\">\n  <img id=\"sprite-image\" s
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image__container {\n  justify-content: center;\n  align-items: center;\n  display: flex;\n  height: 250px;\n  width: 50%;\n  margin: auto;\n  background-color: #4b4b4b;\n  border-radius: 50%; }\n  .image__container img {\n    height: 100%; }\n  .blurin-animation-active {\n  -webkit-animation: blurin 0.5s ease-in;\n          animation: blurin 0.5s ease-in; }\n  @-webkit-keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n  @keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9wb2tlLWVudHJ5L3Bva2Utc3ByaXRlL3Bva2Utc3ByaXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2IsY0FBYTtFQUNiLFdBQVU7RUFDVixhQUFZO0VBT1osMEJBQWlDO0VBQ2pDLG1CQUFrQixFQUluQjtFQWxCRDtJQWdCSSxhQUFZLEVBQ2I7RUFHSDtFQUNFLHVDQUE4QjtVQUE5QiwrQkFBOEIsRUFDL0I7RUFDRDtFQUNFO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBO0VBR25CO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBLEVBQUE7RUFOckI7RUFDRTtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQTtFQUduQjtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcG9rZS1lbnRyeS9wb2tlLXNwcml0ZS9wb2tlLXNwcml0ZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZV9fY29udGFpbmVyIHtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGhlaWdodDogMjUwcHg7XG4gIHdpZHRoOiA1MCU7XG4gIG1hcmdpbjogYXV0bztcbiAgLy8gLXdlYmtpdC1maWx0ZXI6IGJsdXIoNXB4KTtcbiAgLy8gLW1vei1maWx0ZXI6IGJsdXIoNXB4KTtcbiAgLy8gLW8tZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIC1tcy1maWx0ZXI6IGJsdXIoNXB4KTtcbiAgLy8gZmlsdGVyOiBibHVyKDVweCk7XG5cbiAgYmFja2dyb3VuZC1jb2xvcjogcmdiKDc1LCA3NSwgNzUpO1xuICBib3JkZXItcmFkaXVzOiA1MCU7XG4gIGltZyB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICB9XG59XG5cbi5ibHVyaW4tYW5pbWF0aW9uLWFjdGl2ZSB7XG4gIGFuaW1hdGlvbjogYmx1cmluIDAuNXMgZWFzZS1pbjtcbn1cbkBrZXlmcmFtZXMgYmx1cmluIHtcbiAgZnJvbSB7XG4gICAgZmlsdGVyOiBibHVyKDVweCk7XG4gIH1cblxuICB0byB7XG4gICAgZmlsdGVyOiBibHVyKDBweCk7XG4gIH1cbn1cbiJdfQ== */"
+module.exports = ".image__container {\n  justify-content: flex-end;\n  align-items: flex-end;\n  display: flex;\n  height: 250px;\n  width: 50%;\n  margin: auto;\n  background-color: #4b4b4b;\n  border-radius: 50%; }\n  .image__container img {\n    height: 100%; }\n  .blurin-animation-active {\n  -webkit-animation: blurin 0.5s ease-in;\n          animation: blurin 0.5s ease-in; }\n  @-webkit-keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n  @keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9wb2tlLWVudHJ5L3Bva2Utc3ByaXRlL3Bva2Utc3ByaXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsMEJBQXlCO0VBQ3pCLHNCQUFxQjtFQUNyQixjQUFhO0VBQ2IsY0FBYTtFQUNiLFdBQVU7RUFDVixhQUFZO0VBT1osMEJBQWlDO0VBQ2pDLG1CQUFrQixFQUluQjtFQWxCRDtJQWdCSSxhQUFZLEVBQ2I7RUFHSDtFQUNFLHVDQUE4QjtVQUE5QiwrQkFBOEIsRUFDL0I7RUFDRDtFQUNFO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBO0VBR25CO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBLEVBQUE7RUFOckI7RUFDRTtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQTtFQUduQjtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcG9rZS1lbnRyeS9wb2tlLXNwcml0ZS9wb2tlLXNwcml0ZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZV9fY29udGFpbmVyIHtcbiAganVzdGlmeS1jb250ZW50OiBmbGV4LWVuZDtcbiAgYWxpZ24taXRlbXM6IGZsZXgtZW5kO1xuICBkaXNwbGF5OiBmbGV4O1xuICBoZWlnaHQ6IDI1MHB4O1xuICB3aWR0aDogNTAlO1xuICBtYXJnaW46IGF1dG87XG4gIC8vIC13ZWJraXQtZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIC1tb3otZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIC1vLWZpbHRlcjogYmx1cig1cHgpO1xuICAvLyAtbXMtZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIGZpbHRlcjogYmx1cig1cHgpO1xuXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYig3NSwgNzUsIDc1KTtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBpbWcge1xuICAgIGhlaWdodDogMTAwJTtcbiAgfVxufVxuXG4uYmx1cmluLWFuaW1hdGlvbi1hY3RpdmUge1xuICBhbmltYXRpb246IGJsdXJpbiAwLjVzIGVhc2UtaW47XG59XG5Aa2V5ZnJhbWVzIGJsdXJpbiB7XG4gIGZyb20ge1xuICAgIGZpbHRlcjogYmx1cig1cHgpO1xuICB9XG5cbiAgdG8ge1xuICAgIGZpbHRlcjogYmx1cigwcHgpO1xuICB9XG59XG4iXX0= */"
 
 /***/ }),
 
@@ -666,14 +676,20 @@ var PokeService = /** @class */ (function () {
         this.pokedexEndpoint = "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/pokedex/";
         this.pokedexEntry = "";
         this.spriteImageEndpoint = "";
-        this.loading = false;
         this.pokemonName = "";
         this.currentPokePayload = {};
+        this.isLoadingSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
+        this.isLoadingChange = this.isLoadingSubject.asObservable();
         this.pokePayloadSubject = new rxjs__WEBPACK_IMPORTED_MODULE_3__["Subject"]();
         this.pokePayloadChange = this.pokePayloadSubject.asObservable();
     }
     PokeService.prototype.emitPokepayloadChange = function () {
         this.pokePayloadSubject.next(this.currentPokePayload);
+    };
+    PokeService.prototype.emitLoadingStateChange = function () {
+        this.loading = !this.loading;
+        console.log(this.loading);
+        this.isLoadingSubject.next(this.loading);
     };
     PokeService.prototype.getPokemonData = function (pokemonId) {
         var pokemonSpriteEndpoint = "" + this.pokemonSpriteEndpoint + pokemonId;
@@ -684,13 +700,12 @@ var PokeService = /** @class */ (function () {
     };
     PokeService.prototype.callPokedex = function (pokemonId) {
         var _this = this;
+        this.emitLoadingStateChange();
         this.getPokemonData(pokemonId).subscribe(function (data) {
             _this.handlePokePayload(data);
         });
     };
     PokeService.prototype.handlePokePayload = function (mergedPayload) {
-        //Trigger our fake loading modal
-        this.loading = true;
         var pokedexData = mergedPayload[0], spriteData = mergedPayload[1];
         var spriteImageEndpoint = spriteData.sprites.front_default;
         var flavor_text_entries = pokedexData.flavor_text_entries, names = pokedexData.names;
@@ -701,7 +716,6 @@ var PokeService = /** @class */ (function () {
         var pokemonName = names[INDEX_OF_ENGLISH_NAME_ENTRY].name;
         this.pokedexEntry = pokedexEntry;
         this.spriteImageEndpoint = spriteImageEndpoint;
-        this.loading = false;
         this.pokemonName = pokemonName;
         this.currentPokePayload = {
             pokedexEntry: pokedexEntry,
@@ -711,6 +725,7 @@ var PokeService = /** @class */ (function () {
         console.log(this.pokemonSpriteEndpoint);
         console.log(this.currentPokePayload);
         this.emitPokepayloadChange();
+        this.emitLoadingStateChange();
     };
     PokeService.prototype.getPokemonPokedexData = function (pokemonId) {
         var endpoint = "" + this.pokedexEndpoint + pokemonId;

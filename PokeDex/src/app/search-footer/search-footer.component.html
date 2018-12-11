@@ -3,6 +3,7 @@
     [(ngModel)]="userSearchedPokemon"
     placeholder="e.g., '151' or 'Mew'"
     class="logo__container"
+    (keydown)="onKeydown($event)"
   />
   <div class="hamburger__container" (click)="onSearchPokemon()">
     <i class="fas fa-search"></i>

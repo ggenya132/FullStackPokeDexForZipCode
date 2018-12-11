@@ -14,5 +14,11 @@ export class SearchFooterComponent implements OnInit {
     this.pokeService.callPokedex(this.userSearchedPokemon);
   }
 
+  onKeydown(keyDownEvent) {
+    if (keyDownEvent.key === "Enter") {
+      this.onSearchPokemon();
+    }
+  }
+
   ngOnInit() {}
 }
