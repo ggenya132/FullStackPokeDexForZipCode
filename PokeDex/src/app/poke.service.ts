@@ -15,10 +15,13 @@ export class PokeService {
 
   pokedexEntry = "";
   spriteImageEndpoint = "";
-  loading = false;
+  loading;
   pokemonName = "";
 
   currentPokePayload = {};
+
+  private isLoadingSubject = new Subject<any>();
+  public isLoadingChange = this.isLoadingSubject.asObservable();
 
   private pokePayloadSubject = new Subject<any>();
   public pokePayloadChange = this.pokePayloadSubject.asObservable();
@@ -27,6 +30,14 @@ export class PokeService {
 
   emitPokepayloadChange() {
     this.pokePayloadSubject.next(this.currentPokePayload);
+  }
+
+  emitLoadingStateChange() {
+    this.loading = !this.loading;
+
+    console.log(this.loading);
+
+    this.isLoadingSubject.next(this.loading);
   }
 
   getPokemonData(pokemonId) {
@@ -40,15 +51,13 @@ export class PokeService {
   }
 
   callPokedex(pokemonId) {
+    this.emitLoadingStateChange();
     this.getPokemonData(pokemonId).subscribe(data => {
       this.handlePokePayload(data);
     });
   }
 
   handlePokePayload(mergedPayload) {
-    //Trigger our fake loading modal
-    this.loading = true;
-
     let [pokedexData, spriteData] = mergedPayload;
     let {
       sprites: { front_default: spriteImageEndpoint }
@@ -64,7 +73,6 @@ export class PokeService {
 
     this.pokedexEntry = pokedexEntry;
     this.spriteImageEndpoint = spriteImageEndpoint;
-    this.loading = false;
     this.pokemonName = pokemonName;
 
     this.currentPokePayload = {
@@ -77,6 +85,8 @@ export class PokeService {
     console.log(this.currentPokePayload);
 
     this.emitPokepayloadChange();
+
+    this.emitLoadingStateChange();
   }
   getPokemonPokedexData(pokemonId) {
     let endpoint = `${this.pokedexEndpoint}${pokemonId}`;
