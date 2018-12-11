@@ -751,7 +751,7 @@ var PokeService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"navbar-main__container\">\n  <input\n    [(ngModel)]=\"userSearchedPokemon\"\n    placeholder=\"e.g., '151' or 'Mew'\"\n    class=\"logo__container\"\n  />\n  <div class=\"hamburger__container\" (click)=\"onSearchPokemon()\">\n    <i class=\"fas fa-search\"></i>\n  </div>\n</div>\n"
+module.exports = "<div class=\"navbar-main__container\">\n  <input\n    [(ngModel)]=\"userSearchedPokemon\"\n    placeholder=\"e.g., '151' or 'Mew'\"\n    class=\"logo__container\"\n    (keydown)=\"onKeydown($event)\"\n  />\n  <div class=\"hamburger__container\" (click)=\"onSearchPokemon()\">\n    <i class=\"fas fa-search\"></i>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -789,6 +789,11 @@ var SearchFooterComponent = /** @class */ (function () {
     }
     SearchFooterComponent.prototype.onSearchPokemon = function () {
         this.pokeService.callPokedex(this.userSearchedPokemon);
+    };
+    SearchFooterComponent.prototype.onKeydown = function (keyDownEvent) {
+        if (keyDownEvent.key === "Enter") {
+            this.onSearchPokemon();
+        }
     };
     SearchFooterComponent.prototype.ngOnInit = function () { };
     SearchFooterComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
