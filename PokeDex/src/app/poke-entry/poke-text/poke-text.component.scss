@@ -12,4 +12,10 @@
     color: white;
     font-size: 5vw;
   }
+
+  @media (min-width: 700px) {
+    .entry {
+      font-size: 2vw;
+    }
+  }
 }
