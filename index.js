@@ -34,6 +34,7 @@ app.get("/pokemon/:id", (req, res) => {
 //POKEDEX ROUTE
 app.get("/pokemon/pokedex/:id", (req, res) => {
   let { id: pokeId } = req.params;
+  pokeId = pokeId.toLowerCase().trim();
   console.log({ pokeId });
   let parsedEnpoint = `${dexEnpoint}${pokeId}`;
   console.log({ parsedEnpoint });
