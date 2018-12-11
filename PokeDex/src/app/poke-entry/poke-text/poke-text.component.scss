@@ -6,7 +6,7 @@
   background-color: rgb(75, 75, 75);
   margin: 0.5rem;
   border-radius: 15px;
-  height: 250px;
+  height: 30%;
   .entry {
     text-align: center;
     color: white;
@@ -16,6 +16,18 @@
   @media (min-width: 700px) {
     .entry {
       font-size: 2vw;
+    }
+  }
+}
+
+@media (min-height: 570px) {
+  .poke-text__container {
+    height: 38%;
+  }
+
+  @media (min-height: 730px) {
+    .poke-text__container {
+      height: 43%;
     }
   }
 }
