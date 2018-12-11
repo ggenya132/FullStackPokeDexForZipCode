@@ -7,8 +7,11 @@ import { Subject } from "rxjs";
   providedIn: "root"
 })
 export class PokeService {
-  pokemonSpriteEndpoint: string = "http://localhost:9001/pokemon/";
-  pokedexEndpoint: string = "http://localhost:9001/pokemon/pokedex/";
+  //not the best practice
+  pokemonSpriteEndpoint: string =
+    "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/";
+  pokedexEndpoint: string =
+    "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/pokedex/";
 
   pokedexEntry = "";
   spriteImageEndpoint = "";

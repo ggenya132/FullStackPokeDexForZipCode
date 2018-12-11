@@ -22,6 +22,7 @@ app.use(function(req, res, next) {
 app.get("/pokemon/:id", (req, res) => {
   let { id: pokeId } = req.params;
   console.log({ pokeId });
+  pokeId = pokeId.toLowerCase().trim();
   let parsedEnpoint = `${spriteEndpoint}${pokeId}`;
   console.log({ parsedEnpoint });
   fetch(parsedEnpoint)

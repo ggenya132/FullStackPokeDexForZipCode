@@ -476,7 +476,10 @@ __webpack_require__.r(__webpack_exports__);
 var PokeHeaderComponent = /** @class */ (function () {
     function PokeHeaderComponent(pokeService) {
         this.pokeService = pokeService;
-        this.pokeService.pokePayloadChange.subscribe(console.log);
+        this.pokeService.pokePayloadChange.subscribe(function (_a) {
+            var pokedexEntry = _a.pokedexEntry;
+            console.log({ pokedexEntry: pokedexEntry });
+        });
     }
     PokeHeaderComponent.prototype.ngOnInit = function () { };
     PokeHeaderComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
@@ -501,7 +504,7 @@ var PokeHeaderComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"image__container\">\n  <img\n    src=\"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/132.png\"\n    alt=\"\"\n    class=\"sprite\"\n  />\n</div>\n"
+module.exports = "<div class=\"image__container\">\n  <img id=\"sprite-image\" src=\"{{ spriteImageEndpoint}}\" alt=\"\" class=\"sprite\" />\n</div>\n"
 
 /***/ }),
 
@@ -512,7 +515,7 @@ module.exports = "<div class=\"image__container\">\n  <img\n    src=\"https://ra
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".image__container {\n  justify-content: center;\n  align-items: center;\n  display: flex;\n  max-height: 250px; }\n  .image__container img {\n    height: 400px; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9wb2tlLWVudHJ5L3Bva2Utc3ByaXRlL3Bva2Utc3ByaXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2Isa0JBQWlCLEVBSWxCO0VBUkQ7SUFNSSxjQUFhLEVBQ2QiLCJmaWxlIjoic3JjL2FwcC9wb2tlLWVudHJ5L3Bva2Utc3ByaXRlL3Bva2Utc3ByaXRlLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLmltYWdlX19jb250YWluZXIge1xuICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgZGlzcGxheTogZmxleDtcbiAgbWF4LWhlaWdodDogMjUwcHg7XG4gIGltZyB7XG4gICAgaGVpZ2h0OiA0MDBweDtcbiAgfVxufVxuIl19 */"
+module.exports = ".image__container {\n  justify-content: center;\n  align-items: center;\n  display: flex;\n  max-height: 250px;\n  width: 50%;\n  margin: auto;\n  background-color: #4b4b4b;\n  border-radius: 50%; }\n  .image__container img {\n    height: 400px; }\n  .blurin-animation-active {\n  -webkit-animation: blurin 0.5s ease-in;\n          animation: blurin 0.5s ease-in; }\n  @-webkit-keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n  @keyframes blurin {\n  from {\n    -webkit-filter: blur(5px);\n            filter: blur(5px); }\n  to {\n    -webkit-filter: blur(0px);\n            filter: blur(0px); } }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9Xb3JrL0RldmVsb3BtZW50L1ppcENvZGVyTmdQb2tlZGV4L1Bva2VEZXgvc3JjL2FwcC9wb2tlLWVudHJ5L3Bva2Utc3ByaXRlL3Bva2Utc3ByaXRlLmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0Usd0JBQXVCO0VBQ3ZCLG9CQUFtQjtFQUNuQixjQUFhO0VBQ2Isa0JBQWlCO0VBQ2pCLFdBQVU7RUFDVixhQUFZO0VBT1osMEJBQWlDO0VBQ2pDLG1CQUFrQixFQUluQjtFQWxCRDtJQWdCSSxjQUFhLEVBQ2Q7RUFHSDtFQUNFLHVDQUE4QjtVQUE5QiwrQkFBOEIsRUFDL0I7RUFDRDtFQUNFO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBO0VBR25CO0lBQ0UsMEJBQWlCO1lBQWpCLGtCQUFpQixFQUFBLEVBQUE7RUFOckI7RUFDRTtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQTtFQUduQjtJQUNFLDBCQUFpQjtZQUFqQixrQkFBaUIsRUFBQSxFQUFBIiwiZmlsZSI6InNyYy9hcHAvcG9rZS1lbnRyeS9wb2tlLXNwcml0ZS9wb2tlLXNwcml0ZS5jb21wb25lbnQuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi5pbWFnZV9fY29udGFpbmVyIHtcbiAganVzdGlmeS1jb250ZW50OiBjZW50ZXI7XG4gIGFsaWduLWl0ZW1zOiBjZW50ZXI7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIG1heC1oZWlnaHQ6IDI1MHB4O1xuICB3aWR0aDogNTAlO1xuICBtYXJnaW46IGF1dG87XG4gIC8vIC13ZWJraXQtZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIC1tb3otZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIC1vLWZpbHRlcjogYmx1cig1cHgpO1xuICAvLyAtbXMtZmlsdGVyOiBibHVyKDVweCk7XG4gIC8vIGZpbHRlcjogYmx1cig1cHgpO1xuXG4gIGJhY2tncm91bmQtY29sb3I6IHJnYig3NSwgNzUsIDc1KTtcbiAgYm9yZGVyLXJhZGl1czogNTAlO1xuICBpbWcge1xuICAgIGhlaWdodDogNDAwcHg7XG4gIH1cbn1cblxuLmJsdXJpbi1hbmltYXRpb24tYWN0aXZlIHtcbiAgYW5pbWF0aW9uOiBibHVyaW4gMC41cyBlYXNlLWluO1xufVxuQGtleWZyYW1lcyBibHVyaW4ge1xuICBmcm9tIHtcbiAgICBmaWx0ZXI6IGJsdXIoNXB4KTtcbiAgfVxuXG4gIHRvIHtcbiAgICBmaWx0ZXI6IGJsdXIoMHB4KTtcbiAgfVxufVxuIl19 */"
 
 /***/ }),
 
@@ -528,20 +531,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PokeSpriteComponent", function() { return PokeSpriteComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_poke_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/poke.service */ "./src/app/poke.service.ts");
+
 
 
 var PokeSpriteComponent = /** @class */ (function () {
-    function PokeSpriteComponent() {
+    function PokeSpriteComponent(pokeService) {
+        var _this = this;
+        this.pokeService = pokeService;
+        this.pokeService.pokePayloadChange.subscribe(function (_a) {
+            var spriteImageEndpoint = _a.spriteImageEndpoint;
+            _this.spriteImageEndpoint = spriteImageEndpoint;
+            _this.addBlurEffectOnLoad().then(function () {
+                document
+                    .querySelector("#sprite-image")
+                    .classList.remove("blurin-animation-active");
+            });
+        });
     }
-    PokeSpriteComponent.prototype.ngOnInit = function () {
+    PokeSpriteComponent.prototype.ngOnInit = function () { };
+    PokeSpriteComponent.prototype.addBlurEffectOnLoad = function () {
+        return new Promise(function (res, rej) {
+            document
+                .querySelector("#sprite-image")
+                .classList.add("blurin-animation-active");
+            setTimeout(function () {
+                res();
+            }, 500);
+        });
     };
     PokeSpriteComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-poke-sprite',
+            selector: "app-poke-sprite",
             template: __webpack_require__(/*! ./poke-sprite.component.html */ "./src/app/poke-entry/poke-sprite/poke-sprite.component.html"),
             styles: [__webpack_require__(/*! ./poke-sprite.component.scss */ "./src/app/poke-entry/poke-sprite/poke-sprite.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_poke_service__WEBPACK_IMPORTED_MODULE_2__["PokeService"]])
     ], PokeSpriteComponent);
     return PokeSpriteComponent;
 }());
@@ -557,7 +582,7 @@ var PokeSpriteComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"poke-text__container\">\n  <p class=\"entry\">\n    By reading the aura of all things, it can tell how others are feeling from\n    over half a mile away.\n  </p>\n</div>\n"
+module.exports = "<div class=\"poke-text__container\">\n  <p class=\"entry\">{{ pokedexEntry }}</p>\n</div>\n"
 
 /***/ }),
 
@@ -584,20 +609,28 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PokeTextComponent", function() { return PokeTextComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_poke_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/poke.service */ "./src/app/poke.service.ts");
+
 
 
 var PokeTextComponent = /** @class */ (function () {
-    function PokeTextComponent() {
+    function PokeTextComponent(pokeService) {
+        var _this = this;
+        this.pokeService = pokeService;
+        this.pokedexEntry = "";
+        this.pokeService.pokePayloadChange.subscribe(function (_a) {
+            var pokedexEntry = _a.pokedexEntry;
+            _this.pokedexEntry = pokedexEntry;
+        });
     }
-    PokeTextComponent.prototype.ngOnInit = function () {
-    };
+    PokeTextComponent.prototype.ngOnInit = function () { };
     PokeTextComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
-            selector: 'app-poke-text',
+            selector: "app-poke-text",
             template: __webpack_require__(/*! ./poke-text.component.html */ "./src/app/poke-entry/poke-text/poke-text.component.html"),
             styles: [__webpack_require__(/*! ./poke-text.component.scss */ "./src/app/poke-entry/poke-text/poke-text.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [src_app_poke_service__WEBPACK_IMPORTED_MODULE_2__["PokeService"]])
     ], PokeTextComponent);
     return PokeTextComponent;
 }());
@@ -628,8 +661,9 @@ __webpack_require__.r(__webpack_exports__);
 var PokeService = /** @class */ (function () {
     function PokeService(http) {
         this.http = http;
-        this.pokemonSpriteEndpoint = "http://localhost:9001/pokemon/";
-        this.pokedexEndpoint = "http://localhost:9001/pokemon/pokedex/";
+        //not the best practice
+        this.pokemonSpriteEndpoint = "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/";
+        this.pokedexEndpoint = "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/pokedex/";
         this.pokedexEntry = "";
         this.spriteImageEndpoint = "";
         this.loading = false;
@@ -649,7 +683,10 @@ var PokeService = /** @class */ (function () {
         return Object(rxjs__WEBPACK_IMPORTED_MODULE_3__["forkJoin"])([pokedexRequest, pokeSpriteRequest]);
     };
     PokeService.prototype.callPokedex = function (pokemonId) {
-        this.getPokemonData(pokemonId).subscribe(this.handlePokePayload);
+        var _this = this;
+        this.getPokemonData(pokemonId).subscribe(function (data) {
+            _this.handlePokePayload(data);
+        });
     };
     PokeService.prototype.handlePokePayload = function (mergedPayload) {
         //Trigger our fake loading modal
@@ -671,6 +708,8 @@ var PokeService = /** @class */ (function () {
             spriteImageEndpoint: spriteImageEndpoint,
             pokemonName: pokemonName
         };
+        console.log(this.pokemonSpriteEndpoint);
+        console.log(this.currentPokePayload);
         this.emitPokepayloadChange();
     };
     PokeService.prototype.getPokemonPokedexData = function (pokemonId) {
