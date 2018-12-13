@@ -6,7 +6,7 @@
   background-color: rgb(75, 75, 75);
   margin: 0.5rem;
   border-radius: 15px;
-  height: 30%;
+  height: 22%;
   .entry {
     text-align: center;
     color: white;
@@ -22,12 +22,21 @@
 
 @media (min-height: 570px) {
   .poke-text__container {
-    height: 38%;
+    height: 30%;
   }
 
-  @media (min-height: 730px) {
+  @media (min-height: 570px) {
     .poke-text__container {
-      height: 43%;
+      height: 38%;
+      .entry {
+        font-size: 4.5vw;
+      }
+    }
+
+    @media (min-height: 730px) {
+      .poke-text__container {
+        height: 43%;
+      }
     }
   }
 }

@@ -8,10 +8,13 @@ import { Subject } from "rxjs";
 })
 export class PokeService {
   //not the best practice
-  pokemonSpriteEndpoint: string =
+  pokemonSpriteDevEndpoint: string =
     "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/";
-  pokedexEndpoint: string =
+  pokedexDevEndpoint: string =
     "http://ec2-54-167-97-243.compute-1.amazonaws.com:9001/pokemon/pokedex/";
+
+  pokemonSpriteEndpoint = "https://lit-coast-36788.herokuapp.com/pokemon/";
+  pokedexEndpoint = "https://lit-coast-36788.herokuapp.com/pokemon/pokedex/";
 
   pokedexEntry = "";
   spriteImageEndpoint = "";
